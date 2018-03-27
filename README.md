@@ -6,9 +6,9 @@ Using npm:
 $ npm i --save skeletoncard
 ```
 
-##Api
+## Api
 
-####header
+#### header
 
 Type: Boolean
 
@@ -16,7 +16,7 @@ Default: true
 
 Description: header contains a avatar along with a title and subtitle, set to **false** to hide it.
 
-####media
+#### media
 
 Type: Boolean
 
@@ -24,7 +24,7 @@ Default: true
 
 Description: media is a grey div stands for image to be loaded, set to **false** to hide it.
 
-####text
+#### text
 
 Type: Boolean
 
@@ -32,7 +32,7 @@ Default: true
 
 Description: text contains a paragraph title and multiple lines text which specifies in **lines**.
 
-####actions
+#### actions
 
 Type: Boolean
 
@@ -40,7 +40,7 @@ Default: false
 
 Description: actions contains two action button place holders, set to **true** to enable it.
 
-####horizontal
+#### horizontal
 
 Type: Boolean
 
