@@ -78,7 +78,5 @@ Description: set to **true** can offer a hover effect, same in vuetify.
 <skeleton-card actions round hover></skeleton-card>
 ```
 
-
-
-![pic](https://imgur.com/t8z1lKk)
+![pic](https://i.imgur.com/t8z1lKk.png)
 
