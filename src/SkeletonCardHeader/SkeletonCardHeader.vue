@@ -31,7 +31,7 @@ export default {
     computed: {
         radius() {
             if(this.round === true){
-                return 10;
+                return 15;
             } else {
                 return 0;
             }

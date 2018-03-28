@@ -4,7 +4,7 @@
     <v-container v-if="horizontal">
         <v-layout row align-center>
             <v-flex class="flex--grow">
-                <skeleton-card-text :lines="lines" />
+                <skeleton-card-text :round="round" :lines="lines" />
             </v-flex>
             <v-flex>
                 <skeleton-card-media height="150px" width="150px" v-if="media" />             
