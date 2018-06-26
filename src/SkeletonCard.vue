@@ -1,33 +1,20 @@
 <template>
-<v-card class="px-2 mx-5" :hover="hover">
+<v-card v-if="dark" class="px-2 mx-5" :hover="hover" color="grey darken-3">
     <skeleton-card-header v-if="header" :round="round" />
-    <v-container v-if="horizontal">
-        <v-layout row align-center>
-            <v-flex class="flex--grow">
-                <skeleton-card-text :round="round" :lines="lines" />
-            </v-flex>
-            <v-flex>
-                <skeleton-card-media height="150px" width="150px" v-if="media" />             
-            </v-flex>
-        </v-layout>
-    </v-container>
-    <v-layout column v-else>
-        <v-flex class="px-3">
-            <skeleton-card-media v-if="media" />           
-        </v-flex>
-        <v-flex>
-            <skeleton-card-text :lines="lines" v-if="text" :round="round" /> 
-        </v-flex>
-    </v-layout>
+    <skeleton-card-content :horizontal="horizontal" :round="round" :lines="lines" :media="media"/>
+    <skeleton-card-actions v-if="actions" />
+</v-card>
+<v-card v-else class="px-2 mx-5" :hover="hover">
+    <skeleton-card-header v-if="header" :round="round" />
+    <skeleton-card-content :horizontal="horizontal" :round="round" :lines="lines" :media="media"/>
     <skeleton-card-actions v-if="actions" />
 </v-card>
 </template>
 
 <script>
 import SkeletonCardHeader from "./SkeletonCardHeader/SkeletonCardHeader.vue";
-import SkeletonCardMedia from "./SkeletonCardMedia/SkeletonCardMedia.vue";
-import SkeletonCardText from "./SkeletonCardText/SkeletonCardText.vue";
 import SkeletonCardActions from "./SkeletonCardActions/SkeletonCardActions.vue";
+import SkeletonCardContent from "./SkeletonCardContent/SkeletonCardContent.vue";
 
 export default {
   name: "",
@@ -71,9 +58,8 @@ export default {
   },
   components: {
     SkeletonCardHeader,
-    SkeletonCardMedia,
-    SkeletonCardText,
-    SkeletonCardActions
+    SkeletonCardActions,
+    SkeletonCardContent
   },
   data: function() {
     return {};

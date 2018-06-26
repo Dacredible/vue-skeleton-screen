@@ -104,5 +104,11 @@ Default: **false**
 
 Description: set to **true** to have a hover effect, same in vuetify.
 
+#### - dark (new in 0.0.4)
 
+Type: Boolean
+
+Default: **false**
+
+Description: ser to **true** to use dark theme.
 
