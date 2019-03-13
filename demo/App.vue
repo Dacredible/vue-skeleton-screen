@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div>
-      <SkeletonCard actions round hover dark/>
+      <SkeletonCard actions round/>
     </div>
   </div>
 </template>

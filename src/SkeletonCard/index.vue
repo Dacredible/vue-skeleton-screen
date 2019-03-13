@@ -27,10 +27,6 @@ export default {
             type: Boolean,
             default: true
         },
-        text: {
-            type: Boolean,
-            default: true
-        },
         actions: {
             type: Boolean,
             default: false
@@ -50,10 +46,6 @@ export default {
         round: {
             type: Boolean,
             default: false
-        },
-        hover: {
-            type: Boolean,
-            defalut: false
         },
     },
     components: {
