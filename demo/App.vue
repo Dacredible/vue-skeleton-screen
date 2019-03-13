@@ -1,13 +1,13 @@
 <template>
   <div id="app">
     <div>
-    <skeleton-card horizontal actions round hover dark/>
-  </div>
+      <SkeletonCard actions round hover dark/>
+    </div>
   </div>
 </template>
 
 <script>
-import SkeletonCard from '../src/SkeletonCard.vue'
+import SkeletonCard from '../src/SkeletonCard/index.vue'
 export default {
   name: 'App',
   components: {
@@ -18,7 +18,7 @@ export default {
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
