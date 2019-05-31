@@ -2,10 +2,10 @@
     <div class="skeleton-card__content">
         <div class="skeleton-card__row">
             <div class="skeleton-card__column grow-column">
-                <CardText :round="round" :lines="lines"></CardText>
+                <CardText :round="round" :lines="lines" :isLoading="isLoading"></CardText>
             </div>
             <div class="skeleton-card__column">
-                <CardMedia v-if="media"></CardMedia>
+                <CardMedia v-if="media" :isLoading="isLoading"></CardMedia>
             </div>
         </div>
     </div>
@@ -22,6 +22,9 @@ export default {
         CardMedia
     },
     props: {
+        isLoading: {
+            type: Boolean
+        },
         round: {
             type: Boolean
         },
@@ -33,7 +36,7 @@ export default {
         }
     },
     mounted() {
-        console.log(this.lines);
+        // console.log(this.lines);
     }
 };
 </script>

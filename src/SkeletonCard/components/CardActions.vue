@@ -1,13 +1,18 @@
 <template>
   <div class="skeleton-card__actions">
-    <div class="skeleton-card__btn"></div>
-    <div class="skeleton-card__btn"></div>
+    <div class="skeleton-card__btn" :class="{ loading: isLoading}"></div>
+    <div class="skeleton-card__btn" :class="{ loading: isLoading}"></div>
   </div>
 </template>
 
 <script>
 export default {
-    name: 'CardActions'
+    name: 'CardActions',
+    props: {
+        isLoading: {
+            type: Boolean,
+        }
+    }
 };
 </script>
 

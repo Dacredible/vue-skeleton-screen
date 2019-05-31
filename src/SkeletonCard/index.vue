@@ -1,8 +1,8 @@
 <template>
     <div class="skeleton-card" :style="{backgroundColor: bgcolor}">
-        <CardHeader v-if="header" :round="round" :avatar="avatar"></CardHeader>
-        <CardContent :round="round" :lines="lines" :media="media"></CardContent>
-        <CardActions v-if="actions"></CardActions>
+        <CardHeader v-if="header" :round="round" :avatar="avatar" :isLoading="isLoading"></CardHeader>
+        <CardContent :round="round" :lines="lines" :media="media" :isLoading="isLoading"></CardContent>
+        <CardActions v-if="actions" :isLoading="isLoading"></CardActions>
     </div>
 
 </template>
@@ -15,6 +15,10 @@ import CardActions from './components/CardActions.vue';
 export default {
     name: 'SkeletonCard',
     props: {
+        isLoading: {
+            type: Boolean,
+            default: false
+        },
         header: {
             type: Boolean,
             default: true
@@ -89,5 +93,26 @@ export default {
     cursor: default;
 }
 
+.loading {
+    position: relative;
+    overflow: hidden;
+}
+
+.loading::after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-100%);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .2), transparent);
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    100% {
+        transform: translateX(100%);
+    }
+}
 </style>
 

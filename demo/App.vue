@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div>
-      <SkeletonCard actions round/>
+      <SkeletonCard actions round isLoading/>
     </div>
   </div>
 </template>

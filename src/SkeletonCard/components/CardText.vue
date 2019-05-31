@@ -1,8 +1,8 @@
 <template>
     <div class="skeleton-card__text-container">
-        <div :style="{borderRadius: radius + 'px'}" class="skeleton-card__text-title">
+        <div :style="{borderRadius: radius + 'px'}" class="skeleton-card__text-title" :class="{ loading: isLoading}">
         </div>
-        <div :style="{borderRadius: radius + 'px'}" :key="line" v-for="line in lines" class='skeleton-card__text'>
+        <div :style="{borderRadius: radius + 'px'}" :key="line" v-for="line in lines" class='skeleton-card__text' :class="{ loading: isLoading}">
         </div>
     </div>
 </template>
@@ -11,12 +11,15 @@
 export default {
     name: 'CardText',
     props: {
+        isLoading: {
+            type: Boolean,
+        },
         lines: {
             type: Number
         },
         round: {
             type: Boolean
-        }
+        },
     },
     computed: {
         radius() {

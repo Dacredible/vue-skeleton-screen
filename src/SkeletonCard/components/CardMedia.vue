@@ -1,10 +1,15 @@
 <template>
-    <div class="skeleton-card__media"></div>
+    <div class="skeleton-card__media" :class="{ loading: isLoading }"></div>
 </template>
 
 <script>
 export default {
-    name: 'CardMedia'
+    name: 'CardMedia',
+    props: {
+        isLoading: {
+            type: Boolean,
+        }
+    }
 };
 </script>
 

@@ -5,9 +5,9 @@
                 <CardAvatar></CardAvatar>
             </div>
             <div class="skeleton-card__column grow-column">
-                <div :style="{borderRadius: radius + 'px'}" class="skeleton-card__title">
+                <div :style="{borderRadius: radius + 'px'}" class="skeleton-card__title" :class="{ loading: isLoading}">
                 </div>
-                <div :style="{borderRadius: radius + 'px'}" class="skeleton-card__subtitle">
+                <div :style="{borderRadius: radius + 'px'}" class="skeleton-card__subtitle" :class="{ loading: isLoading}">
                 </div>
             </div>
         </div>
@@ -23,6 +23,9 @@ export default {
         CardAvatar
     },
     props: {
+        isLoading: {
+            type: Boolean,
+        },
         avatar: {
             type: Boolean,
         },
