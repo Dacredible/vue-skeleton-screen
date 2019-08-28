@@ -1,6 +1,6 @@
 {
   "name": "vue-skeleton-screen",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "a skeleton screen written in Vue.js",
   "main": "/src/SkeletonCard/index.vue",
   "scripts": {
