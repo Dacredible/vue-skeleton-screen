@@ -1,19 +1,19 @@
 <template>
   <div id="app">
     <div>
-      <SkeletonCard actions round isLoading/>
+      <SkeletonCard dark actions round isLoading />
     </div>
   </div>
 </template>
 
 <script>
-import SkeletonCard from '../src/SkeletonCard/index.vue'
+import SkeletonCard from "../src/SkeletonCard/index.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
     SkeletonCard
   }
-}
+};
 </script>
 
 <style>
